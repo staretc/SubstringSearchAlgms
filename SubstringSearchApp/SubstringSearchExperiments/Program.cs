@@ -11,8 +11,21 @@ namespace SubstringSearchExperiments
     {
         static void Main(string[] args)
         {
-            var algm = new KnuthMorrisPrattAlgorithm();
-            Console.WriteLine(String.Join(" ", algm.Search("aabaabaaaabaabaaab", "aabaa")));
+            var text = "aabaabaaaabaabaaab";
+            var pattern = "aabaa";
+            var algms = new ISubstringSearch[]
+            {
+                new KnuthMorrisPrattAlgorithm(),
+                new RabinCarpAlgorithm()
+            };
+
+            Console.WriteLine("text: " + text);
+            Console.WriteLine("pattern: " + pattern);
+
+            foreach (var algm in algms)
+            {
+                Console.WriteLine("Found substrings at indexes: " + String.Join(" ", algm.Search(text, pattern)));
+            }
         }
     }
 }

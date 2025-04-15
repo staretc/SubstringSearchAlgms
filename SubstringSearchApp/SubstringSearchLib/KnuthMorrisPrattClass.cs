@@ -66,7 +66,7 @@ namespace SubstringSearchLib
                 textPointer++;
             }
 
-            return indexesOfSubstring;
+            return indexesOfSubstring.Count == 0 ? new List<int>() { -1 } : indexesOfSubstring;
         }
         /// <summary>
         /// Подсчёт префикс-функции для строки
