@@ -121,5 +121,52 @@ namespace SubstringSearchTests
                 CollectionAssert.AreEqual(expected, actual);
             }
         }
+        [TestMethod]
+        public void ComplexTest_LongPatternInLongText()
+        {
+            string text = "Все счастливые семьи похожи друг на друга, каждая несчастливая семья несчастлива по-своему. " +
+                          "Всё смешалось в доме Облонских...";
+            string pattern = "Все счастливые семьи похожи друг на друга, каждая несчастливая семья несчастлива по-своему";
+            List<int> expected = new List<int> { 0 };
+
+            foreach (var algm in algms)
+            {
+                var actual = algm.Search(text, pattern);
+                CollectionAssert.AreEqual(expected, actual);
+            }
+        }
+        [TestMethod]
+        // Кириллица с редкими символами и пробелами
+        // Проверяем подстроку с пробелами и редкими символами
+        public void ComplexTest_CyrillicWithSpacesAndRareChars()
+        {
+            string text = "В доме Облонских всё смешалось, Анна Каренина не могла успокоиться.";
+            string pattern = "Анна Каренина";
+            List<int> expected = new List<int> { 32 };
+
+            foreach (var algm in algms)
+            {
+                var actual = algm.Search(text, pattern);
+                CollectionAssert.AreEqual(expected, actual);
+            }
+        }
+
+        [TestMethod]
+        // Производительность на длинном тексте с одним вхождением
+        // Проверяем, что алгоритмы не падают на большом тексте
+        public void ComplexTest_LargeTextWithSingleOccurrence()
+        {
+            // Создаём текст из 100,000 символов 'б' и одного вхождения "анна" в конце
+            string text = new string('б', 100000) + "анна";
+            string pattern = "анна";
+            List<int> expected = new List<int> { 100000 };
+
+            foreach (var algm in algms)
+            {
+                var actual = algm.Search(text, pattern);
+                CollectionAssert.AreEqual(expected, actual);
+            }
+        }
+
     }
 }

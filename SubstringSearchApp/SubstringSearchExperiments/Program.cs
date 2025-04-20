@@ -101,23 +101,5 @@ namespace SubstringSearchExperiments
                 Console.WriteLine($"Произошла ошибка: {ex.Message}");
             }
         }
-        //var text = "aabaabaaaabaabaaab";
-        //var pattern = "aabaa";
-        //var algms = new ISubstringSearch[]
-        //{
-        //    new KnuthMorrisPrattAlgorithm(),
-        //    new RabinCarpAlgorithm(),
-        //    new BoyerMooreAlgorithm(),
-        //    new BruteForceAlgorithm()
-        //};
-
-        //Console.WriteLine("text: " + text);
-        //Console.WriteLine("pattern: " + pattern);
-
-        //foreach (var algm in algms)
-        //{
-        //    Console.WriteLine("Found substrings at indexes: " + String.Join(" ", algm.Search(text, pattern)));
-        //}
-
     }
 }
