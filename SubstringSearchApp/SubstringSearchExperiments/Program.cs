@@ -14,7 +14,7 @@ namespace SubstringSearchExperiments
         static void Main(string[] args)
         {
             // Путь к текстовому файлу
-            string filePath = "anna.txt";
+            string filePath = "../../../anna.txt";
 
             try
             {

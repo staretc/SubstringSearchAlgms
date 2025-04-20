@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubstringSearchLib", "SubstringSearchLib\SubstringSearchLib.csproj", "{3B3F3953-D1C5-4968-B15D-E864C34EF049}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubstringSearchExperiments", "SubstringSearchExperiments\SubstringSearchExperiments.csproj", "{0D989883-7118-4A99-84B1-5DD101251FE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubstringSearchTests", "SubstringSearchTests\SubstringSearchTests.csproj", "{60936874-4E5C-408A-9AA4-9FBCEE55002C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0D989883-7118-4A99-84B1-5DD101251FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D989883-7118-4A99-84B1-5DD101251FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D989883-7118-4A99-84B1-5DD101251FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60936874-4E5C-408A-9AA4-9FBCEE55002C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60936874-4E5C-408A-9AA4-9FBCEE55002C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60936874-4E5C-408A-9AA4-9FBCEE55002C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60936874-4E5C-408A-9AA4-9FBCEE55002C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -18,8 +18,7 @@ namespace SubstringSearchLib
         public List<int> Search(string text, string pattern)
         {
             // проверяем на некорректные случаи входных параметров
-            if (pattern == null || text == null ||
-                pattern.Length > text.Length)
+            if (string.IsNullOrEmpty(pattern) || string.IsNullOrEmpty(text) || pattern.Length > text.Length)
             {
                 return new List<int>() { -1 };
             }
